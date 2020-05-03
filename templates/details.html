@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/details_css.css') }}">
+	<title>Splitwise</title>
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	<p>	.</p>
+	<p>	.</p>
+	{% for ele in alist %}
+		<p class="ele">{{ele}}</p>
+	{% endfor %}
+	{% if error %}
+		<p class="err">{{error}}</p>
+	{% endif %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<form action="http://localhost:5000/groupscalc" method="POST">
+	<select name="Name">
+	{% for ele in list %}
+<p class="qw"><option value="{{ele}}">{{ele}}</option></p>
+	{% endfor %}
+		</select>
+
+
+<p class="u">			paid Rs. <input type = "text" name = "amount" /> for </p><br>
+<br>
+<br>
+<br>
+		<p class="everyone">	<input type="checkbox" name="name" value="Everyone"> Everyone<br></p>
+		<br>
+		<br>
+		{% for element in list %}
+			<div><p class="r">	<input type="checkbox" name="name" value="{{element}}"> {{element}}<br><br></p>
+				<br><br></div>
+		{% endfor %}
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<br>
+		<p ><input type="submit" value="Submit"></p>
+	</form>
+	<form action="http://localhost:5000/returntohome" method="POST">
+		<p class="back"><input type="submit" value="Return to Home Page"></p>
+	</form>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/ver_css.css') }}">
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+	<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	{% if check %}
+      <p class="msg" style="color:red"><strong>{{ check }}</strong></p>
+    {% endif %}
+    <p class="fmsg"><strong>A verification code has been sent to {{ email }}</strong></p>
+	<form action="http://localhost:5000/verify" method="POST">
+		<p class="code">Enter Verification Code:<input type = "text" name = "Code" /></p>
+		<p class="asd"><input type="submit" value="Submit"></p>
+	</form>
+	<form action="http://localhost:5000/returntohome" method="POST">
+		<p class="home"><input type="submit" value="Return to home"></p>
+	</form>
+</body>
+</html>

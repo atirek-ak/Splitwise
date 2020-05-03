@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/list_css.css') }}">
+	<title>Splitwise</title>
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	<p>	.</p>
+	<p>	.</p>
+	<p class="caption">	Suggested friends:	</p>
+	<form action="http://localhost:5000/addfriend" method="POST">
+		{% for row in rows %}
+			<p class="add"><input type="checkbox" name="friend" value="{{row}}"> {{row}}<br></p>
+		{% endfor %}
+		
+		<p class="s"><input type="submit" value="Add to friend list"></p>
+	</form>
+
+	<form action="http://localhost:5000/returntohome" method="POST">
+		<p class="back"><input type="submit" value="Go back"></p>
+	</form>
+</body>
+</html>

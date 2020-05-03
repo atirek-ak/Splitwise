@@ -1,0 +1,77 @@
+body {
+		background-image: url("bg.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-attachment: fixed;
+		background-color: #cccccc;
+	}
+
+  p.ele{
+    color:white;
+    left:4px;
+    font-size: 30px;
+    position: fixed;
+  }
+  p.everyone{
+    color:white;
+    left:4px;
+    font-size: 20px;
+    position: fixed;
+  }
+  p.err{
+    position: fixed;
+    color:white;
+    font-size: 20px;
+    bottom:0;
+  }
+  p.u{
+    color:white;
+    left:4px;
+    font-size: 20px;
+    position: fixed;
+  }
+  p.qw{
+    color:white;
+    left:4px;
+    font-size: 20px;
+    position: fixed;
+  }
+  p.r{
+    color:white;
+    left:4px;
+    font-size: 20px;
+    position: fixed;
+  }
+
+  a:visited, a:link {
+      color:white;
+      font-size: 20px;
+      text-decoration: none;
+      left:4px;
+
+  }
+  a:hover {
+    color:grey;
+    text-decoration: none;
+  }
+  p.back {
+    position: fixed;
+    right:2%;
+    top:90%;
+  }
+	img.app_ka_tag{
+		left: 10%;
+		position: fixed;
+	}
+	input[type=submit]{
+	    color: white;
+	    text-decoration: none;
+	    cursor: pointer;
+			background-color:green;
+			border: none;
+			padding: 10px 30px;
+			text-align: center;
+			font-size: 16px;
+			border-radius: 12px;
+	}

@@ -1,0 +1,61 @@
+body {
+		background-image: url("bg.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-attachment: fixed;
+		background-color: #cccccc;
+	}
+
+
+
+	p.err {
+		color:red;
+		left:4px;
+    font-size: 17px;
+    bottom:0;
+    position:fixed;
+	}
+  p.User{
+    color:white;
+    left:4px;
+    font-size: 30px;
+    position: fixed;
+  }
+  p.list{
+    color:white;
+    font-size: 25px;
+    left:4px;
+
+  }
+  p.f{
+    color:white;
+    left:4px;
+
+  }
+  p.create{
+    color:white;
+    position: fixed;
+    left:4px;
+
+  }
+  p.back {
+    position: fixed;
+    right:2%;
+    top:90%;
+  }
+	img.app_ka_tag{
+		left: 10%;
+		position: fixed;
+	}
+	input[type=submit]{
+	    color: white;
+	    text-decoration: none;
+	    cursor: pointer;
+			background-color:green;
+			border: none;
+			padding: 10px 30px;
+			text-align: center;
+			font-size: 16px;
+			border-radius: 12px;
+	}

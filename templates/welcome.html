@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/welcome_css.css') }}">
+	<title>Splitwise</title>
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	<p>	.</p>
+	<div class="User">
+		<p>Logged in as {{result}} </p>
+	</div>
+
+	<form action="http://localhost:5000/logout" method="POST">
+		<p class="lout"><input type="submit" value="Logout"></p>
+	</form>
+
+	<p class="f">
+		<a href="http://localhost:5000/list">|| Friends you can add ||</a>
+	</p>
+
+	<p class="m">
+		<a href="http://localhost:5000/display">|| Money taken and given ||</a>
+	</p>
+
+	<p class="t">
+		<a href="http://localhost:5000/transactions">|| View all your transactions ||</a>
+	</p>
+
+	<p class="g">
+		<a href="http://localhost:5000/groups">|| View all your groups ||</a>
+	</p>
+
+	<p class="ng">
+		<a href="http://localhost:5000/create">|| Create New Group ||</a>
+	</p>
+
+	{% if connection %}
+      <p class="err"><strong>{{ connection }}</strong></p>
+    {% endif %}
+	<form action="http://localhost:5000/updateuseraccounts" method="POST">
+		<br>
+		<br>
+		<p class="amt">Amount:<input type = "text" name="amount"/></p>
+		<p>.</p>
+		<p class="select"><select name="select"></p>
+			<p class="to"><option value="to">Paid by</option></p>
+  			<p class="by"><option value="by">Given to</option></p>
+		</select>
+
+		{% for element in list %}
+		<p class="nm">	<input type="checkbox" name="name" value="{{element}}"> {{element}}<br>
+		{% endfor %}
+		<p class="s"><input type="submit" value="Submit"></p>
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index_css.css') }}">
+	<title>Splitwise</title>
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+	<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	{% if error %}
+	<p></p>
+	<h2><p class="msg" style="color:red"><strong>{{ error }}</strong></p></h2>
+
+
+    {% endif %}
+	<form action="http://localhost:5000/" method="POST">
+		<p class="User">Username:<input type = "text" name = "ID" /></p>
+		<p class="password">Password:<input type = "password" name="Password"/></p>
+		<p class="login"><input type="submit" value="Log In"></p>
+	</form>
+	<form action="http://localhost:5000/sign_up" method="POST">
+		<p class="signup"><input type="submit" value="Sign Up"></p>
+	</form>
+</body>
+</html>

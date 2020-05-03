@@ -1,0 +1,62 @@
+body {
+		background-image: url("background_index.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-attachment: fixed;
+		background-color: #cccccc;
+	}
+
+	p.User {
+		color:Grey;
+		position: fixed;
+		top: 40%;
+		left:2%;
+		font-size: 30px;
+	}
+
+	p.password {
+		color:Grey;
+		position: fixed;
+		top: 50%;
+		left:2%;
+		font-size: 30px;
+	}
+
+	p.signup {
+		color:White;
+		position: fixed;
+		top: 65%;
+		left:7%;
+	}
+
+	p.login {
+		color:White;
+		position: fixed;
+		top: 65%;
+		left:17%;
+
+	}
+
+	p.msg {
+		color:White;
+		position: fixed;
+		top: 75%;
+		left:2px;
+
+	}
+	img.app_ka_tag{
+		left: 10%;
+		position: fixed;
+	}
+	input[type=submit]{
+	    color: white;
+	    text-decoration: none;
+	    cursor: pointer;
+			background-color:green;
+			border: none;
+			padding: 10px 30px;
+			text-align: center;
+			font-size: 16px;
+			border-radius: 12px;
+	}

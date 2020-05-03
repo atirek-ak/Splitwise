@@ -1,0 +1,42 @@
+body {
+		background-image: url("bg.jpg");
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: right top;
+		background-attachment: fixed;
+		background-color: #cccccc;
+	}
+
+
+
+	p.msg {
+		color:White;
+		left:2px;
+    font-size: 20px;
+
+	}
+  p.caption{
+    color:white;
+    left:2px;
+    font-size: 30px;
+  }
+  p.back {
+    position: fixed;
+    right:2%;
+    top:90%;
+  }
+	img.app_ka_tag{
+		left: 10%;
+		position: fixed;
+	}
+	input[type=submit]{
+	    color: white;
+	    text-decoration: none;
+	    cursor: pointer;
+			background-color:green;
+			border: none;
+			padding: 10px 30px;
+			text-align: center;
+			font-size: 16px;
+			border-radius: 12px;
+	}

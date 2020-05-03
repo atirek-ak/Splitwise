@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sign Up</title>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/signup_css.css') }}">
+
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+	<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	{% if error %}
+      <p class="msg"><strong>{{ error }}</strong></p>
+    {% endif %}
+	<form action="http://localhost:5000/commit_details" method="POST">
+		<p class="User">Username:<input type = "text" name = "Name" /></p>
+		<p class="email">Email ID:<input type = "text" name = "ID" /></p>
+		<p class="password">Password:<input type = "password" name="Password1"/></p>
+		<p class="verify">Verify Password:<input type = "password" name="Password2"/></p>
+		<p class="asd"><input type="submit" value="Submit"></p>
+	</form>
+	<form action="http://localhost:5000/returntohome" method="POST">
+		<p class="home"><input type="submit" value="Return to home"></p>
+	</form>
+</body>
+</html>

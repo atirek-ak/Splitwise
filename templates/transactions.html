@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="jpeg/png" href="https://image.freepik.com/free-icon/euro-symbol_318-33107.jpg">
+	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/transactions_css.css') }}">
+	<title>Splitwise</title>
+</head>
+<body>
+	<img src="{{url_for('static', filename='styles/app.png')}}" width=500 alt="image not found" class="app_ka_naam">
+<p></p>
+	<img src="{{url_for('static', filename='styles/name.png')}}" width=500 alt="image not found" class="app_ka_tag">
+	
+	<p class="caption">	Activity Log:	</p>
+	{% for ele in alist %}
+		<p class="msg">-->{{ele}}</p>
+	{% endfor %}
+	<form action="http://localhost:5000/returntohome" method="POST">
+		<p class="back"><input type="submit" value="Go back"></p>
+	</form>
+</body>
+</body>
+</html>
